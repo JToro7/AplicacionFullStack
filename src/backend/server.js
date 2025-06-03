@@ -1,3 +1,4 @@
+// src/backend/server.js - VERSIÓN ULTRA MINIMALISTA
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -7,14 +8,11 @@ import postRoutes from './routes/postRoutes.js';
 
 dotenv.config();
 
-dotenv.config();
-
 const app = express();
-const PORT = process.env.PORT || 3000;
-
+const PORT = process.env.PORT || 3000; // ✅ ÚNICO cambio
 
 // Middlewares
-app.use(cors()); 
+app.use(cors());
 app.use(express.json());
 
 // Rutas
